@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - GR Powerwashing</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>GR Powerwashing - Contact</title>
+  <style>
+    /* Same as index.html's style */
+  </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="logo">
-            <img src="grp_logo.png" alt="GR Powerwashing Logo" class="logo-img">
-            <h1>GR Powerwashing</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="info.html">Info</a></li>
-                <li><a href="how-to-book.html">How to Book</a></li>
-                <li><a href="terms.html">Terms & Conditions</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1><img src="grp_logo.png" alt="Logo"> GR Powerwashing</h1>
+    <nav>
+      <a href="index.html">Info</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <!-- Main Content Section for Contact -->
-    <section>
-        <h2>Contact Us</h2>
-        <p>You can reach us via the following methods:</p>
-        <ul>
-            <li>Email: <a href="mailto:ethankia1619@gmail.com">Click Here</a></li>
-            <li>Phone: <strong>616-387-0268</strong></li>
-        </ul>
-    </section>
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>If you have questions or want to schedule a cleaning session, reach out!</p>
+    <p><strong>Phone:</strong> (616) 387-0268</p>
+    <p><strong>Email:</strong> contact@grpowerwashing.com</p>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 GR Powerwashing. All rights reserved.</p>
-    </footer>
+    <h3>How to Book</h3>
+    <ol>
+      <li>Text us at <strong>(616) 387-0268</strong></li>
+      <li>Tell us what you need + job details</li>
+      <li>We’ll schedule your cleaning session!</li>
+    </ol>
+  </div>
+
+  <div class="popup" id="popup">
+    <h3 id="popup-title">Spring Special!</h3>
+    <p id="popup-message">Get 10% off driveways until May 1st!</p>
+    <button onclick="document.getElementById('popup').style.display='none'">Close</button>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('popup').style.display = 'block';
+    }, 5000);
+  </script>
 </body>
 </html>
