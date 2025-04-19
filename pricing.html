@@ -1,65 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pricing - GR Powerwashing</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - GR Powerwashing</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <header>
-    <div class="logo-container">
-      <img src="grp_logo.png" alt="GR Powerwashing Logo" class="logo">
-      <h1>GR Powerwashing</h1>
-    </div>
-    <nav>
-      <a href="index.html">Info</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="terms.html">Terms & Scope</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="grp_logo.png" alt="GR Powerwashing Logo" class="logo-img">
+            <h1>GR Powerwashing</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="how-to-book.html">How to Book</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
+    <!-- Main Content Section for Pricing -->
     <section>
-      <h2>Pricing</h2>
-      <ul>
-        <li><strong>$10:</strong> 1 Trash Can (Powerwash & Premium Soap)</li>
-        <li><strong>$20:</strong> 2 Trash Cans (Powerwash & Premium Soap)</li>
-        <li><strong>$35:</strong> 3+ Trash Cans (Powerwash & Premium Soap)</li>
-        <li><strong>$50:</strong> Sidewalk Package (Powerwash w/ Premium Soap & Trim)</li>
-        <li><strong>$60:</strong> Driveway Package (Small) (Powerwash w/ Premium Soap, Trim, Weed Removal)</li>
-        <li><strong>$75:</strong> Driveway Package (Medium) (Powerwash w/ Premium Soap, Trim, Weed Removal, Trim around edges)</li>
-        <li><strong>$90:</strong> Driveway Package (Large) (Medium Perks + 1 Trashcan)</li>
-        <li><strong>$100:</strong> Driveway Package (Deluxe) (Large Perks + 3 Trashcans)</li>
-      </ul>
+        <h2>Pricing</h2>
+        <ul>
+            <li><strong>$10</strong> – One garbage can</li>
+            <li><strong>$20</strong> – Two garbage cans</li>
+            <li><strong>$35</strong> – Three or more garbage cans</li>
+            <li><strong>$50</strong> – Sidewalk package (basic concrete cleaning)</li>
+            <li><strong>$60</strong> – Small driveway</li>
+            <li><strong>$75</strong> – Medium driveway</li>
+            <li><strong>$90</strong> – Large driveway</li>
+            <li><strong>$100</strong> – Driveway Deluxe (deep clean + sealant)</li>
+        </ul>
     </section>
-  </main>
 
-  <!-- Popup Modal -->
-  <div id="popup-modal" class="popup-modal">
-    <div class="popup-content">
-      <span class="close-btn" onclick="closePopup()">&times;</span>
-      <h2 id="popup-title">Special Offer!</h2>
-      <p id="popup-message">Get 30% off all driveway packages this week only!</p>
-    </div>
-  </div>
-
-  <script>
-    function showPopup() {
-      document.getElementById("popup-modal").style.display = "block";
-    }
-
-    function closePopup() {
-      document.getElementById("popup-modal").style.display = "none";
-    }
-
-    // Show popup 5 seconds after page load
-    window.addEventListener('load', function () {
-      setTimeout(showPopup, 5000);
-    });
-  </script>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 GR Powerwashing. All rights reserved.</p>
+    </footer>
 </body>
 </html>
