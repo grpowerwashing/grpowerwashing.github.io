@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing - GR Powerwashing</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>GR Powerwashing - Pricing</title>
+  <style>
+    /* Same as index.html's style */
+    /* Use the same CSS here */
+  </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="logo">
-            <img src="grp_logo.png" alt="GR Powerwashing Logo" class="logo-img">
-            <h1>GR Powerwashing</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="info.html">Info</a></li>
-                <li><a href="how-to-book.html">How to Book</a></li>
-                <li><a href="terms.html">Terms & Conditions</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1><img src="grp_logo.png" alt="Logo"> GR Powerwashing</h1>
+    <nav>
+      <a href="index.html">Info</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <!-- Main Content Section for Pricing -->
-    <section>
-        <h2>Pricing</h2>
-        <ul>
-            <li><strong>$10</strong> – One garbage can</li>
-            <li><strong>$20</strong> – Two garbage cans</li>
-            <li><strong>$35</strong> – Three or more garbage cans</li>
-            <li><strong>$50</strong> – Sidewalk package (basic concrete cleaning)</li>
-            <li><strong>$60</strong> – Small driveway</li>
-            <li><strong>$75</strong> – Medium driveway</li>
-            <li><strong>$90</strong> – Large driveway</li>
-            <li><strong>$100</strong> – Driveway Deluxe (deep clean + sealant)</li>
-        </ul>
-    </section>
+  <div class="container">
+    <h2>Pricing</h2>
+    <p>Affordable power washing services tailored to your needs.</p>
+    <h3>Our Packages:</h3>
+    <ul>
+      <li><strong>1 Trash Can:</strong> $10 (Powerwash & Premium Soap)</li>
+      <li><strong>2 Trash Cans:</strong> $20 (Powerwash & Premium Soap)</li>
+      <li><strong>3+ Trash Cans:</strong> $35 (Powerwash & Premium Soap)</li>
+      <li><strong>Sidewalk Package:</strong> $50 (Powerwash w/ Premium Soap & Trim)</li>
+      <li><strong>Driveway Small:</strong> $60 (Powerwash w/ Premium Soap, Trim, Weed Removal)</li>
+      <li><strong>Driveway Medium:</strong> $75 (Powerwash w/ Premium Soap, Trim, Weed Removal)</li>
+      <li><strong>Driveway Large:</strong> $90 (Medium Perks + 1 Trashcan)</li>
+      <li><strong>Driveway Deluxe:</strong> $100 (Large Perks + 3 Trashcans)</li>
+    </ul>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 GR Powerwashing. All rights reserved.</p>
-    </footer>
+    <h3>How to Book</h3>
+    <ol>
+      <li>Text us at <strong>(616) 387-0268</strong></li>
+      <li>Tell us what you need + job details</li>
+      <li>We’ll schedule your cleaning session!</li>
+    </ol>
+  </div>
+
+  <div class="popup" id="popup">
+    <h3 id="popup-title">Spring Special!</h3>
+    <p id="popup-message">Get 10% off driveways until May 1st!</p>
+    <button onclick="document.getElementById('popup').style.display='none'">Close</button>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('popup').style.display = 'block';
+    }, 5000);
+  </script>
 </body>
 </html>
