@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GR Powerwashing - Contact</title>
+  <title>Contact | GR Powerwashing</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="header">
+
+  <header>
     <div class="logo-title">
       <img src="grp_logo.png" alt="GR Powerwashing Logo" class="logo" />
       <h1>GR Powerwashing</h1>
@@ -15,34 +16,41 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="pricing.html">Pricing</a>
-      <a href="info.html">Info</a>
-      <a href="terms.html">Terms</a>
       <a href="contact.html" class="active">Contact</a>
+      <a href="terms.html">Terms</a>
+      <a href="how-to-book.html">How to Book</a>
     </nav>
   </header>
 
-  <main class="content">
-    <h2>Contact & Booking</h2>
-    <p>Fill out the form below to request a booking or ask a question. We'll respond as soon as possible.</p>
+  <main>
+    <h2>Contact Us</h2>
+    <p>If you have questions or would like to schedule a power washing service, please use the form below:</p>
 
     <form action="https://formspree.io/f/mnnpevgl" method="POST" class="contact-form">
-      <label for="email">Your Email:<span>*</span></label>
-      <input type="email" id="email" name="email" required />
+      <input type="hidden" name="_redirect" value="https://grpowerwashing.github.io/thankyou.html" />
 
-      <label for="package">Your Package:<span>*</span></label>
-      <input type="text" id="package" name="package" required />
+      <label for="email">Your Email (required):</label>
+      <input type="email" id="email" name="email" required>
 
-      <label for="phone">Your Phone:</label>
-      <input type="tel" id="phone" name="phone" />
+      <label for="package">Your Package (required):</label>
+      <input type="text" id="package" name="package" required>
 
-      <label for="neighborhood">Your Neighborhood:<span>*</span></label>
-      <input type="text" id="neighborhood" name="neighborhood" required />
+      <label for="phone">Your Phone (optional):</label>
+      <input type="tel" id="phone" name="phone">
 
-      <label for="address">Your Address:<span>*</span></label>
-      <input type="text" id="address" name="address" required />
+      <label for="neighborhood">Your Neighborhood (required):</label>
+      <input type="text" id="neighborhood" name="neighborhood" required>
 
-      <button type="submit">Send</button>
+      <label for="address">Your Address (required):</label>
+      <input type="text" id="address" name="address" required>
+
+      <button type="submit">Submit</button>
     </form>
   </main>
+
+  <footer>
+    <p>&copy; 2025 GR Powerwashing. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
