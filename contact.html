@@ -1,29 +1,91 @@
-<form
-  action="https://formspree.io/f/mnnpevgl"
-  method="POST"
-  id="contactForm"
->
-  <label for="email">Your Email: <span class="required">*</span></label>
-  <input type="email" id="email" name="email" required />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | GR Powerwashing</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="grp_logo.png" alt="GR Powerwashing Logo" class="logo" />
+      <h1>GR Powerwashing</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
 
-  <label for="package">Your Package: <span class="required">*</span></label>
-  <input type="text" id="package" name="package" required />
+  <main>
+    <section class="content-section">
+      <h2>Contact Us</h2>
+      <p>Have questions or want to schedule a cleaning? Fill out the form below.</p>
 
-  <label for="phone">Your Phone: <span class="optional">(Optional)</span></label>
-  <input type="text" id="phone" name="phone" />
+      <form action="https://formspree.io/f/mnnpevgl" method="POST" id="contactForm" class="contact-form">
+        <label for="email">Your Email: <span>*</span></label>
+        <input type="email" name="email" id="email" required>
 
-  <label for="neighborhood">Your Neighborhood: <span class="required">*</span></label>
-  <input type="text" id="neighborhood" name="neighborhood" required />
+        <label for="package">Your Package: <span>*</span></label>
+        <input type="text" name="package" id="package" required>
 
-  <label for="address">Your Address: <span class="required">*</span></label>
-  <input type="text" id="address" name="address" required />
+        <label for="phone">Your Phone:</label>
+        <input type="text" name="phone" id="phone">
 
-  <button type="submit">Submit</button>
-</form>
+        <label for="neighborhood">Your Neighborhood: <span>*</span></label>
+        <input type="text" name="neighborhood" id="neighborhood" required>
 
-<audio id="submitSound" src="submit-sound.mp3" preload="auto"></audio>
-<script>
-  document.getElementById("contactForm").addEventListener("submit", () => {
-    document.getElementById("submitSound").play();
-  });
-</script>
+        <label for="address">Your Address: <span>*</span></label>
+        <input type="text" name="address" id="address" required>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <audio id="submitSound" src="submit-sound.mp3" preload="auto"></audio>
+
+      <div id="form-message" style="display: none; color: #0f0; margin-top: 1rem;">
+        Thanks! We'll be in touch soon.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GR Powerwashing. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById("contactForm");
+    const msg = document.getElementById("form-message");
+    const sound = document.getElementById("submitSound");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const action = form.action;
+
+      try {
+        const response = await fetch(action, {
+          method: "POST",
+          body: data,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          form.reset();
+          msg.style.display = "block";
+          sound.play();
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      } catch (error) {
+        alert("Something went wrong. Please try again.");
+      }
+    });
+  </script>
+</body>
+</html>
