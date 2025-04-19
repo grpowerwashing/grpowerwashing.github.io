@@ -4,8 +4,79 @@
   <meta charset="UTF-8">
   <title>GR Powerwashing - Pricing</title>
   <style>
-    /* Same as index.html's style */
-    /* Use the same CSS here */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #1b1b1b;
+      color: #ffffff;
+      background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><polygon points="5,0 10,10 0,10" fill="%23222"/></svg>');
+    }
+    header {
+      background-color: #121212;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 2px solid #00bfff;
+    }
+    header img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    header h1 {
+      color: #00bfff;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+    }
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00bfff;
+    }
+    .container {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #00bfff;
+    }
+    .popup {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #1e1e1e;
+      color: #fff;
+      padding: 20px;
+      border: 2px solid #00bfff;
+      border-radius: 10px;
+      display: none;
+      z-index: 1000;
+    }
+    .popup h3 {
+      margin: 0 0 10px 0;
+    }
+    .popup button {
+      background: #00bfff;
+      border: none;
+      padding: 8px 12px;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .price-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .price-list li {
+      margin: 10px 0;
+    }
   </style>
 </head>
 <body>
@@ -22,8 +93,9 @@
   <div class="container">
     <h2>Pricing</h2>
     <p>Affordable power washing services tailored to your needs.</p>
+
     <h3>Our Packages:</h3>
-    <ul>
+    <ul class="price-list">
       <li><strong>1 Trash Can:</strong> $10 (Powerwash & Premium Soap)</li>
       <li><strong>2 Trash Cans:</strong> $20 (Powerwash & Premium Soap)</li>
       <li><strong>3+ Trash Cans:</strong> $35 (Powerwash & Premium Soap)</li>
@@ -55,4 +127,3 @@
   </script>
 </body>
 </html>
-
