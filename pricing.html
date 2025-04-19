@@ -1,48 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing - GR Powerwashing</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GR Powerwashing - Pricing</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="logo">
-            <img src="grp_logo.png" alt="GR Powerwashing Logo" class="logo-img">
-            <h1>GR Powerwashing</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="info.html">Info</a></li>
-                <li><a href="how-to-book.html">How to Book</a></li>
-                <li><a href="terms.html">Terms & Conditions</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="navbar">
+    <div class="logo">
+      <img src="grp_logo.png" alt="GR Powerwashing Logo" />
+      <span>GR Powerwashing</span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="info.html">Info</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms & Scope</a>
+    </nav>
+  </header>
 
-    <!-- Main Content Section for Pricing -->
-    <section>
-        <h2>Pricing</h2>
-        <ul>
-            <li><strong>$10</strong> – One garbage can</li>
-            <li><strong>$20</strong> – Two garbage cans</li>
-            <li><strong>$35</strong> – Three or more garbage cans</li>
-            <li><strong>$50</strong> – Sidewalk package (basic concrete cleaning)</li>
-            <li><strong>$60</strong> – Small driveway</li>
-            <li><strong>$75</strong> – Medium driveway</li>
-            <li><strong>$90</strong> – Large driveway</li>
-            <li><strong>$100</strong> – Driveway Deluxe (deep clean + sealant)</li>
-        </ul>
-    </section>
+  <main>
+    <h1>Pricing</h1>
+    <ul>
+      <li>1 Trash Can - $10 (Powerwash & Premium Soap)</li>
+      <li>2 Trash Cans - $20 (Powerwash & Premium Soap)</li>
+      <li>3+ Trash Cans - $35 (Powerwash & Premium Soap)</li>
+      <li>Sidewalk Package - $50 (Powerwash w/ Premium Soap & Trim)</li>
+      <li>Driveway Package (Small) - $60 (Powerwash w/ Premium Soap, Trim, Weed Removal)</li>
+      <li>Driveway Package (Medium) - $75 (Powerwash w/ Premium Soap, Trim, Weed Removal, Trim around edges)</li>
+      <li>Driveway Package (Large) - $90 (Medium Perks + 1 Trashcan)</li>
+      <li>Driveway Package (Deluxe) - $100 (Large Perks + 3 Trashcans)</li>
+    </ul>
+  </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 GR Powerwashing. All rights reserved.</p>
-    </footer>
+  <!-- Popup -->
+  <div id="popup-container" class="popup-hidden">
+    <div id="popup-box">
+      <h2 id="popup-title">Special Offer!</h2>
+      <p id="popup-message">Get 30% off all packages this month only!</p>
+      <button id="popup-button">Got it!</button>
+    </div>
+  </div>
+
+  <!-- Popup Script -->
+  <script>
+    window.onload = () => {
+      setTimeout(() => {
+        document.getElementById('popup-container').classList.remove('popup-hidden');
+      }, 5000);
+    };
+    document.getElementById('popup-button').onclick = () => {
+      document.getElementById('popup-container').classList.add('popup-hidden');
+    };
+  </script>
 </body>
 </html>
+
+/* styles.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f0f0f;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #00b4ff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  color: #00b4ff;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00b4ff;
+}
+
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+main h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00b4ff;
+}
+
+main ul {
+  list-style-type: none;
+  padding: 0;
+  line-height: 2rem;
+}
+
+/* Popup Styles */
+#popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#popup-box {
+  background-color: #111827;
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 15px #00b4ff;
+  max-width: 90%;
+  width: 400px;
+}
+
+#popup-box h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+}
+
+#popup-box p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+#popup-box button {
+  background-color: #00b4ff;
+  color: #000;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#popup-box button:hover {
+  background-color: #0078a0;
+}
+
+.popup-hidden {
+  display: none;
+}
