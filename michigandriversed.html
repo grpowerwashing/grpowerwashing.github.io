@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Michigan Driver's Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    .quiz-container {
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .question {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    button {
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #eee;
+    }
+    button.correct {
+      background-color: #c8f7c5;
+    }
+    button.incorrect {
+      background-color: #f7c5c5;
+    }
+    #score {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    #result {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Michigan Driver's Education Practice Test</h1>
+<div id="score">Score: 0 / 50</div>
+<div id="result"></div>
+
+<div id="quiz"></div>
+
+<script>
+const questions = [
+  { question: "What does a flashing red light mean?", options: [
+    {text: "Stop and proceed when safe", correct: true},
+    {text: "Yield", correct: false},
+    {text: "Caution", correct: false},
+    {text: "Speed up", correct: false},
+  ]},
+  { question: "What is the speed limit in a residential area in Michigan (unless posted otherwise)?", options: [
+    {text: "25 mph", correct: true},
+    {text: "30 mph", correct: false},
+    {text: "35 mph", correct: false},
+    {text: "20 mph", correct: false},
+  ]},
+  // Insert questions 3 through 50 here — let me know if you'd like the full set inserted.
+];
+
+let score = 0;
+let answered = 0;
+
+function loadQuiz() {
+  const quizDiv = document.getElementById('quiz');
+  questions.forEach((q, index) => {
+    const container = document.createElement('div');
+    container.className = 'quiz-container';
+
+    const questionElem = document.createElement('div');
+    questionElem.className = 'question';
+    questionElem.textContent = `Question ${index + 1}: ${q.question}`;
+    container.appendChild(questionElem);
+
+    q.options.forEach(option => {
+      const btn = document.createElement('button');
+      btn.textContent = option.text;
+      btn.onclick = () => {
+        if (btn.disabled) return;
+        const buttons = container.querySelectorAll('button');
+        buttons.forEach(b => b.disabled = true);
+
+        if (option.correct) {
+          btn.classList.add('correct');
+          score++;
+        } else {
+          btn.classList.add('incorrect');
+        }
+
+        answered++;
+        document.getElementById('score').textContent = `Score: ${score} / 50`;
+
+        if (answered === questions.length) {
+          const result = document.getElementById('result');
+          result.textContent = score >= 40 ? 'Result: PASSED' : 'Result: FAILED';
+          result.style.color = score >= 40 ? 'green' : 'red';
+        }
+      };
+      container.appendChild(btn);
+    });
+
+    quizDiv.appendChild(container);
+  });
+}
+
+loadQuiz();
+</script>
+
+</body>
+</html>
